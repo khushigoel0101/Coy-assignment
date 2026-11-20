@@ -1,0 +1,303 @@
+
+[
+  {
+    "id": 1,
+    "name": "Aarav",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=12",
+    "bio": "Coffee enthusiast and weekend explorer.",
+    "city": "Delhi",
+    "interests": ["Travel", "Photography", "Music"],
+    "likedYou": true
+  },
+  {
+    "id": 2,
+    "name": "Ananya",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=47",
+    "bio": "Bookworm who loves discovering new cafes.",
+    "city": "Gurgaon",
+    "interests": ["Reading", "Food", "Art"],
+    "likedYou": false
+  },
+  {
+    "id": 3,
+    "name": "Kabir",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=13",
+    "bio": "Developer by day, guitarist by night.",
+    "city": "Noida",
+    "interests": ["Coding", "Music", "Gaming"],
+    "likedYou": true
+  },
+  {
+    "id": 4,
+    "name": "Meera",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=44",
+    "bio": "Always looking for my next adventure.",
+    "city": "Jaipur",
+    "interests": ["Hiking", "Travel", "Movies"],
+    "likedYou": false
+  },
+  {
+    "id": 5,
+    "name": "Rohan",
+    "age": 24,
+    "photo": "https://i.pravatar.cc/400?img=14",
+    "bio": "Fitness lover and amateur chef.",
+    "city": "Bangalore",
+    "interests": ["Fitness", "Cooking", "Sports"],
+    "likedYou": false
+  },
+  {
+    "id": 6,
+    "name": "Ishita",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=48",
+    "bio": "Art, sunsets and long conversations.",
+    "city": "Mumbai",
+    "interests": ["Painting", "Travel", "Art"],
+    "likedYou": true
+  },
+  {
+    "id": 7,
+    "name": "Dev",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=15",
+    "bio": "Football fanatic and tech enthusiast.",
+    "city": "Pune",
+    "interests": ["Football", "Technology", "Movies"],
+    "likedYou": false
+  },
+  {
+    "id": 8,
+    "name": "Sana",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=49",
+    "bio": "Music is basically my personality.",
+    "city": "Hyderabad",
+    "interests": ["Music", "Dancing", "Travel"],
+    "likedYou": false
+  },
+  {
+    "id": 9,
+    "name": "Arjun",
+    "age": 24,
+    "photo": "https://i.pravatar.cc/400?img=16",
+    "bio": "Startup enthusiast and coffee addict.",
+    "city": "Delhi",
+    "interests": ["Startups", "Business", "Reading"],
+    "likedYou": false
+  },
+  {
+    "id": 10,
+    "name": "Diya",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=50",
+    "bio": "Dancer, dreamer and foodie.",
+    "city": "Chennai",
+    "interests": ["Dancing", "Food", "Movies"],
+    "likedYou": true
+  },
+  {
+    "id": 11,
+    "name": "Vihaan",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=17",
+    "bio": "Love mountains and road trips.",
+    "city": "Dehradun",
+    "interests": ["Travel", "Hiking", "Photography"],
+    "likedYou": false
+  },
+  {
+    "id": 12,
+    "name": "Tara",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=51",
+    "bio": "Design student with a creative mind.",
+    "city": "Mumbai",
+    "interests": ["Design", "Art", "Fashion"],
+    "likedYou": false
+  },
+  {
+    "id": 13,
+    "name": "Aditya",
+    "age": 25,
+    "photo": "https://i.pravatar.cc/400?img=18",
+    "bio": "Weekend cyclist and nature lover.",
+    "city": "Bangalore",
+    "interests": ["Cycling", "Nature", "Fitness"],
+    "likedYou": false
+  },
+  {
+    "id": 14,
+    "name": "Naina",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=52",
+    "bio": "Collecting memories, not things.",
+    "city": "Kolkata",
+    "interests": ["Travel", "Reading", "Photography"],
+    "likedYou": false
+  },
+  {
+    "id": 15,
+    "name": "Reyansh",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=19",
+    "bio": "A little bit nerdy, a little bit adventurous.",
+    "city": "Noida",
+    "interests": ["Gaming", "Technology", "Music"],
+    "likedYou": false
+  },
+  {
+    "id": 16,
+    "name": "Aditi",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=53",
+    "bio": "Plant parent and aspiring chef.",
+    "city": "Pune",
+    "interests": ["Cooking", "Gardening", "Food"],
+    "likedYou": false
+  },
+  {
+    "id": 17,
+    "name": "Karan",
+    "age": 24,
+    "photo": "https://i.pravatar.cc/400?img=20",
+    "bio": "Basketball and late-night coding.",
+    "city": "Delhi",
+    "interests": ["Basketball", "Coding", "Gaming"],
+    "likedYou": false
+  },
+  {
+    "id": 18,
+    "name": "Riya",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=54",
+    "bio": "Film lover and aspiring filmmaker.",
+    "city": "Mumbai",
+    "interests": ["Movies", "Photography", "Art"],
+    "likedYou": false
+  },
+  {
+    "id": 19,
+    "name": "Manav",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=21",
+    "bio": "Exploring the world one city at a time.",
+    "city": "Jaipur",
+    "interests": ["Travel", "Food", "History"],
+    "likedYou": false
+  },
+  {
+    "id": 20,
+    "name": "Kiara",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=55",
+    "bio": "Book lover and aspiring writer.",
+    "city": "Chennai",
+    "interests": ["Writing", "Reading", "Music"],
+    "likedYou": false
+  },
+  {
+    "id": 21,
+    "name": "Dhruv",
+    "age": 25,
+    "photo": "https://i.pravatar.cc/400?img=22",
+    "bio": "Marathon runner and travel addict.",
+    "city": "Hyderabad",
+    "interests": ["Running", "Travel", "Fitness"],
+    "likedYou": false
+  },
+  {
+    "id": 22,
+    "name": "Myra",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=56",
+    "bio": "Fashion, coffee and good conversations.",
+    "city": "Gurgaon",
+    "interests": ["Fashion", "Food", "Art"],
+    "likedYou": false
+  },
+  {
+    "id": 23,
+    "name": "Neil",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=23",
+    "bio": "Music producer and tech enthusiast.",
+    "city": "Bangalore",
+    "interests": ["Music", "Technology", "Gaming"],
+    "likedYou": false
+  },
+  {
+    "id": 24,
+    "name": "Sara",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=57",
+    "bio": "Ocean lover and scuba diving enthusiast.",
+    "city": "Goa",
+    "interests": ["Swimming", "Travel", "Nature"],
+    "likedYou": false
+  },
+  {
+    "id": 25,
+    "name": "Atharv",
+    "age": 24,
+    "photo": "https://i.pravatar.cc/400?img=24",
+    "bio": "Chess player and problem solver.",
+    "city": "Delhi",
+    "interests": ["Chess", "Coding", "Reading"],
+    "likedYou": false
+  },
+  {
+    "id": 26,
+    "name": "Zoya",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=58",
+    "bio": "Loves exploring hidden food spots.",
+    "city": "Lucknow",
+    "interests": ["Food", "Travel", "Cooking"],
+    "likedYou": false
+  },
+  {
+    "id": 27,
+    "name": "Pranav",
+    "age": 23,
+    "photo": "https://i.pravatar.cc/400?img=25",
+    "bio": "Football, friends and spontaneous plans.",
+    "city": "Pune",
+    "interests": ["Football", "Travel", "Music"],
+    "likedYou": false
+  },
+  {
+    "id": 28,
+    "name": "Avni",
+    "age": 21,
+    "photo": "https://i.pravatar.cc/400?img=59",
+    "bio": "Art enthusiast and sunset chaser.",
+    "city": "Kolkata",
+    "interests": ["Painting", "Photography", "Nature"],
+    "likedYou": false
+  },
+  {
+    "id": 29,
+    "name": "Samar",
+    "age": 24,
+    "photo": "https://i.pravatar.cc/400?img=26",
+    "bio": "Building products and chasing ideas.",
+    "city": "Noida",
+    "interests": ["Startups", "Technology", "Fitness"],
+    "likedYou": false
+  },
+  {
+    "id": 30,
+    "name": "Ira",
+    "age": 22,
+    "photo": "https://i.pravatar.cc/400?img=60",
+    "bio": "Doodling, dancing and discovering new places.",
+    "city": "Chandigarh",
+    "interests": ["Dancing", "Art", "Travel"],
+    "likedYou": false
+  }
+]
