@@ -1,7 +1,7 @@
 
-import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { readJSON, writeJSON } from "../utils/fileStorage.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,25 +11,27 @@ const swipesPath = path.join(__dirname, "../data/swipes.json");
 
 export const swipeProfile = (req, res) => {
   try {
-    const { profileId, action } = req.body;
+    const { profileId, action } = req.body ?? {};
 
     // Validate request
-    if (!profileId || !["like", "pass"].includes(action)) {
+    if (
+      !Number.isSafeInteger(profileId) ||
+      profileId <= 0 ||
+      !["like", "pass"].includes(action)
+    ) {
       return res.status(400).json({
-        message: "Valid profileId and action are required"
+        message:
+          "A positive integer profileId and a valid action (like/pass) are required"
       });
     }
 
-    const profiles = JSON.parse(
-      fs.readFileSync(profilesPath, "utf-8")
-    );
+    // Read data
+    const profiles = readJSON(profilesPath);
+    const swipes = readJSON(swipesPath);
 
-    const swipes = JSON.parse(
-      fs.readFileSync(swipesPath, "utf-8")
-    );
-
+    // Check whether profile exists
     const profile = profiles.find(
-      (p) => p.id === Number(profileId)
+      (p) => p.id === profileId
     );
 
     if (!profile) {
@@ -40,7 +42,7 @@ export const swipeProfile = (req, res) => {
 
     // Prevent duplicate swipes
     const alreadySwiped = swipes.some(
-      (swipe) => swipe.profileId === Number(profileId)
+      (swipe) => swipe.profileId === profileId
     );
 
     if (alreadySwiped) {
@@ -51,29 +53,27 @@ export const swipeProfile = (req, res) => {
 
     // Save swipe
     const newSwipe = {
-      profileId: Number(profileId),
+      profileId,
       action
     };
 
     swipes.push(newSwipe);
+    writeJSON(swipesPath, swipes);
 
-    fs.writeFileSync(
-      swipesPath,
-      JSON.stringify(swipes, null, 2)
-    );
+    // Check for mutual like
+    const isMatch =
+      action === "like" && profile.likedYou === true;
 
-    // Match only when both users liked each other
-    const isMatch = action === "like" && profile.likedYou === true;
-
-    res.status(201).json({
+    return res.status(201).json({
       message: isMatch ? "It's a match!" : "Swipe recorded",
       isMatch,
-      profileId: Number(profileId)
+      profileId
     });
 
   } catch (error) {
     console.error("Swipe error:", error);
-    res.status(500).json({
+
+    return res.status(500).json({
       message: "Could not record swipe"
     });
   }

@@ -10,7 +10,7 @@ function Matches() {
     const fetchMatches = async () => {
       try {
         const data = await getMatches();
-        setMatches(data);
+        setMatches(data.matches);
       } catch (error) {
         console.error("Could not load matches:", error);
       } finally {

@@ -89,6 +89,10 @@ Frontend runs at the local URL displayed by Vite, usually `http://localhost:5173
 | POST | `/api/swipe` | Like or pass a profile |
 | GET | `/api/matches` | Fetch mutual matches |
 
+## SCREENSHOTS
+![alt text](image.png)
+
+![alt text](image-1.png)
 ### Swipe request example
 
 ```json

@@ -1,7 +1,7 @@
 
-import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { readJSON } from "../utils/fileStorage.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,34 +11,35 @@ const swipesPath = path.join(__dirname, "../data/swipes.json");
 
 export const getMatches = (req, res) => {
   try {
-    const profiles = JSON.parse(
-      fs.readFileSync(profilesPath, "utf-8")
+    const profiles = readJSON(profilesPath);
+    const swipes = readJSON(swipesPath);
+
+    // Get profiles that the logged-in user liked
+    const likedProfileIds = new Set(
+      swipes
+        .filter((swipe) => swipe.action === "like")
+        .map((swipe) => swipe.profileId)
     );
 
-    const swipes = JSON.parse(
-      fs.readFileSync(swipesPath, "utf-8")
-    );
-
-    // Find profiles that the user has liked
-    const likedProfileIds = swipes
-      .filter((swipe) => swipe.action === "like")
-      .map((swipe) => swipe.profileId);
-
-    // Mutual likes are the only matches
+    // A match exists only when both users liked each other
     const matches = profiles
       .filter(
         (profile) =>
-          likedProfileIds.includes(profile.id) &&
+          likedProfileIds.has(profile.id) &&
           profile.likedYou === true
       )
       .map(({ likedYou, ...profile }) => profile);
 
-    res.status(200).json(matches);
+    return res.status(200).json({
+      count: matches.length,
+      matches
+    });
 
   } catch (error) {
     console.error("Matches error:", error);
-    res.status(500).json({
-      message: "Could not load matches"
+
+    return res.status(500).json({
+      message: "Could not fetch matches"
     });
   }
 };

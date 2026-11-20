@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { Heart, X, RotateCw } from "lucide-react";
+import { Heart, X} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getFeed, swipeProfile } from "../services/api";
 import ProfileCard from "../components/Profilecard";
@@ -12,15 +12,15 @@ function Discover() {
   const [match, setMatch] = useState(null);
   const [swiping, setSwiping] = useState(false);
 
-  const fetchProfiles = async () => {
-    try {
-      setError("");
-      const data = await getFeed();
-      setProfiles(data);
+ const fetchProfiles = async () => {
+        try {
+        setError("");
+        const data = await getFeed();
+        setProfiles(data.profiles);
     } catch {
-      setError("Unable to load profiles. Please try again.");
+        setError("Unable to load profiles. Please try again.");
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
   };
 
