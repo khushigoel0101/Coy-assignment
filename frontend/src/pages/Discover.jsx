@@ -74,24 +74,24 @@ function Discover() {
   return (
    <section className="mx-auto min-h-[calc(100dvh-80px)] max-w-6xl px-4 pt-6 pb-8 md:px-6 md:py-10">
       <div className="mb-5 text-center md:mb-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#bd7955]">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-black">
           A little connection goes a long way
         </p>
-        <h1 className="mt-3 text-3xl font-bold md:text-4xl tracking-tight text-[#414832]">
+        <h1 className="mt-3 text-3xl font-bold md:text-4xl tracking-tight text-pink-600">
           Discover
         </h1>
-        <p className="mt-2 text-sm text-[#777769]">
+        <p className="mt-2 text-sm text-gray-600">
           Find your kind of people.
         </p>
       </div>
 
       {profiles.length === 0 ? (
         <div className="mx-auto max-w-md rounded-3xl border border-[#e9e6dd] bg-white p-12 text-center">
-          <Heart size={38} className="mx-auto text-[#bd7955]" />
-          <h2 className="mt-5 text-xl font-semibold text-[#414832]">
+          <Heart size={38} className="mx-auto text-black" />
+          <h2 className="mt-5 text-xl font-semibold text-black">
             You've seen everyone!
           </h2>
-          <p className="mt-2 text-sm text-[#777769]">
+          <p className="mt-2 text-sm text-gray-600">
             You've explored all available profiles. Check back later!
           </p>
         </div>
@@ -123,7 +123,7 @@ function Discover() {
             <button
               disabled={swiping}
               onClick={() => handleSwipe("pass")}
-              className="flex h-16 w-16 items-center justify-center rounded-full border border-[#e8d8d1] bg-white text-[#bd7955] shadow-md transition hover:scale-110 hover:bg-[#fcf3ef] disabled:opacity-50"
+              className="flex h-16 w-16 items-center justify-center rounded-full border border-[#e8d8d1] bg-white text-black shadow-md transition hover:scale-110 hover:bg-[#fcf3ef] disabled:opacity-50"
               aria-label="Pass"
             >
               <X size={30} />
@@ -132,14 +132,14 @@ function Discover() {
             <button
               disabled={swiping}
               onClick={() => handleSwipe("like")}
-              className="flex h-16 w-16 items-center justify-center rounded-full bg-[#414832] text-white shadow-md transition hover:scale-110 hover:bg-[#343b28] disabled:opacity-50"
+              className="flex h-16 w-16 items-center justify-center rounded-full bg-pink-600 text-black shadow-md transition hover:scale-110 hover:bg-pink-500 disabled:opacity-50"
               aria-label="Like"
             >
               <Heart size={27} />
             </button>
           </div>
 
-          <p className="mt-5 text-center text-xs text-[#99988c]">
+          <p className="mt-5 text-center text-xs text-gray-500 md:mt-6">
             Swipe right to like · Swipe left to pass
           </p>
         </>
@@ -159,20 +159,20 @@ function Discover() {
               className="w-full max-w-sm rounded-[32px] bg-[#f8f7f4] p-9 text-center shadow-2xl"
             >
               <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-[#e8eadd] text-[#414832]">
-                <Heart size={38} fill="currentColor" />
+                <Heart size={38} fill="pink" />
               </div>
 
-              <h2 className="mt-6 text-3xl font-bold text-[#414832]">
+              <h2 className="mt-6 text-3xl font-bold text-black">
                 It's a match!
               </h2>
 
-              <p className="mt-3 text-sm text-[#777769]">
+              <p className="mt-3 text-sm text-gray-600">
                 You and {match.name} liked each other.
               </p>
 
               <button
                 onClick={() => setMatch(null)}
-                className="mt-8 w-full rounded-full bg-[#414832] py-3.5 font-medium text-white transition hover:bg-[#343b28]"
+                className="mt-8 w-full rounded-full bg-pink-600 py-3.5 font-medium text-black transition hover:bg-pink-500"
               >
                 Keep discovering
               </button>
